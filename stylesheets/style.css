@@ -1,0 +1,724 @@
+@font-face {
+  font-family: "Abel";
+  font-display: block;
+  font-style: normal;
+  font-weight: 400;
+  src: local("☺"),
+    url(https://fonts.gstatic.com/s/abel/v8/MwQ5bhbm2POE2V9BPQ.woff2)
+      format("woff2");
+}
+
+#navbar {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background-color: white;
+  flex-flow: wrap;
+  justify-content: flex-end;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  z-index: 0;
+  display: flex;
+  margin: 0 auto;
+  background-color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 20px;
+  flex-flow: wrap;
+}
+
+button {
+  font-size: 20px;
+}
+
+form {
+  margin-bottom: 0px;
+}
+
+iframe {
+  border: none;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-weight: 200;
+}
+
+h3 {
+  color: black;
+}
+
+p {
+  font-family: "Abel", sans-serif;
+}
+
+a {
+  color: black;
+}
+
+.responsive {
+  width: auto;
+  max-width: 500px;
+  height: 100%;
+}
+
+.button {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.frameMulti {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.frame {
+  display: block;
+  border: none;
+}
+
+/* navbar */
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.linkTo,
+.start {
+  width: 15vw;
+  min-width: 100px;
+  max-width: 180px;
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.linkTo {
+  color: black;
+  background-color: white;
+}
+
+.start {
+  color: white;
+  background-color: #c03221;
+}
+
+.linkTo:hover {
+  background-color: #ccc;
+}
+
+.start:hover {
+  background-color: #9e291c;
+}
+
+.responsiveMenu {
+  display: none;
+}
+
+.dropMenu {
+  width: 98%;
+  float: right;
+  margin: 1%;
+  padding: 10px;
+  padding-bottom: 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #c03221;
+  text-decoration: none;
+}
+
+.dropMenu:hover {
+  background-color: #9e291c;
+}
+
+.menuContent {
+  display: none;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.droppedLink {
+  width: 98%;
+  float: right;
+  margin: 2px 1%;
+  padding: 12px 0px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: none;
+}
+
+.droppedLink:hover {
+  background-color: #ccc;
+}
+
+.drop {
+  display: flex;
+}
+
+.frameLine {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.lineBlack {
+  width: 66%;
+  height: 1px;
+  float: right;
+  background-color: #888;
+}
+
+@media all and (max-width: 1300px) {
+  .linkTo,
+  .start {
+    width: 14vw;
+    min-width: 80px;
+    margin: 1vw;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .linkTo,
+  .start {
+    display: none;
+  }
+
+  .responsiveMenu {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+/* header */
+
+.header {
+  display: flex;
+  height: auto;
+  overflow: hidden;
+  background-color: white;
+  flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.headerPicture {
+  width: 100%;
+  height: 30vw;
+  background-image: url(../graphics/Haus3.1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.headerTextFrame {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.headerText {
+  padding: 1%;
+  color: black;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 50px;
+}
+
+.headerButton {
+  max-width: 430px;
+  margin-right: auto;
+  margin-bottom: 5%;
+  margin-left: auto;
+}
+
+.scrollToContact,
+.scrollToServices {
+  width: 150px;
+  height: 40px;
+  margin: 20px;
+  padding-top: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.scrollToContact {
+  background-color: #195757;
+}
+
+.scrollToServices {
+  background-color: #c03221;
+}
+
+.scrollToContact:hover {
+  background-color: #154848;
+}
+
+.scrollToServices:hover {
+  background-color: #9e291c;
+}
+
+@media all and (max-width: 620px) {
+  .scrollToContact,
+  .scrollToServices {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .headerPicture {
+    width: 100%;
+    height: 40vw;
+    background-image: url(../graphics/LWLogo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+/* content */
+
+.content {
+  width: 100%;
+  justify-content: center;
+}
+
+.contentContact,
+.contentImprint,
+.contentInfo,
+.contentServices,
+.contentSite,
+.contentJobs {
+  display: flex;
+  padding: 50px 17%;
+  overflow: hidden;
+  font-family: "Abel", sans-serif;
+  flex-flow: column wrap;
+}
+
+.contentSite {
+  display: block;
+  color: black;
+}
+
+.contentImprint {
+  height: 700px;
+}
+
+.contentInfo {
+  background: #ddd;
+}
+
+.contentSlide {
+  width: 66vw;
+  height: auto;
+  margin: 40px auto 0px auto;
+}
+
+.slide {
+  display: none;
+  height: 40vw;
+}
+
+.picture1,
+.picture2,
+.picture3,
+.picture4,
+.picture5,
+.picture6 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.picture1 {
+  background-image: url(../graphics/slide1.jpg);
+}
+
+.picture2 {
+  background-image: url(../graphics/slide2.jpg);
+}
+
+.picture3 {
+  background-image: url(../graphics/slide3.jpg);
+}
+
+.picture4 {
+  background-image: url(../graphics/slide4.jpg);
+}
+
+.picture5 {
+  background-image: url(../graphics/slide5.jpg);
+}
+
+.picture6 {
+  background-image: url(../graphics/slide6.jpg);
+}
+
+.left,
+.right {
+  display: flex;
+  -webkit-box-align: center;
+  width: 50%;
+  height: 100%;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  justify-content: flex-start;
+}
+
+.right {
+  float: right;
+  justify-content: flex-end;
+}
+
+.textLeftRight {
+  padding: 20px;
+  color: #666;
+  -moz-user-select: None;
+  -ms-user-select: None;
+  -webkit-user-select: None;
+}
+
+.text {
+  padding: 0px 20px;
+  text-align: center;
+  -moz-user-select: None;
+  -ms-user-select: None;
+  -webkit-user-select: None;
+}
+
+.dotsBlack,
+.dotsTransparent {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.dotsBlack {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 1px solid;
+  border-color: #666;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+.dotsTransparent {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 1px solid;
+  border-color: #888;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.dotsBlack:hover,
+.dotsTransparent:hover {
+  background-color: #666;
+  transition: all 0.3s ease-in-out;
+}
+
+.contentServices {
+  background: #ddd;
+}
+
+.contentPanorama {
+  background-image: url(../graphics/panorama.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 30vw;
+  margin: 0;
+}
+
+.contentJobs {
+  background: #ddd;
+}
+
+.contentContact {
+  background-color: white;
+}
+
+label {
+  margin-left: 10px;
+}
+
+.emailFrame,
+.nameFrame,
+.subjectFrame {
+  display: flex;
+  width: 32%;
+  height: auto;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.messageFrame {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 10px 0px;
+  flex-direction: column;
+}
+
+#email,
+#message,
+#name,
+#subject,
+.g-recaptcha,
+.submit {
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#email,
+#name,
+#subject {
+  max-width: 100%;
+  height: 45px;
+}
+
+#message {
+  max-width: 100%;
+  height: 260px;
+}
+
+.g-recaptcha {
+  width: 304px;
+  height: 78px;
+  padding: 0px;
+  border: none;
+}
+
+.submit {
+  width: 304px;
+  height: 45px;
+  float: right;
+  margin-right: 10px;
+  color: white;
+  border: none;
+  background: #c03221;
+}
+
+.submit:hover {
+  background: #9e291c;
+}
+
+.contentMap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 1500px) {
+  .emailFrame,
+  .nameFrame {
+    width: 47%;
+  }
+
+  .subjectFrame {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .emailFrame,
+  .nameFrame,
+  .subjectFrame {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .contentAboutUs1,
+  .contentAboutUs2 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contentContact {
+    display: flex;
+    padding: 50px 2%;
+    overflow: hidden;
+    font-family: "Abel", sans-serif;
+    flex-direction: column;
+  }
+
+  .contentSlide {
+    width: 100%;
+  }
+
+  .slide {
+    height: 70vw;
+  }
+
+  .g-recaptcha,
+  .submit {
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contentContact,
+  .contentInfo,
+  .contentServices,
+  .contentSite,
+  .contentJobs {
+    display: flex;
+    padding: 30px 10%;
+    overflow: hidden;
+    font-family: "Abel", sans-serif;
+    flex-direction: column;
+  }
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: white;
+  flex: 1 1 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footerPartFrame {
+  display: flex;
+  width: 280px;
+  height: auto;
+  margin: 10px 20px;
+  flex-direction: column;
+}
+
+.footerPicture {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  padding-top: 40px;
+}
+
+.footerText {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.footerCopyright {
+  width: 100%;
+  color: white;
+  background-color: #666;
+  text-align: center;
+  font-size: 14px;
+}
+
+#cookie-popup {
+  z-index: 100;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  color: white;
+  background: #666;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.cookieButton {
+  width: 200px;
+  height: 50px;
+  margin: 10px 0px;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #195757;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cookieButton:hover {
+  background-color: #154848;
+}
+
+@media all and (max-width: 880px) {
+  .footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footerPartFrame {
+    display: flex;
+    width: 250px;
+    height: auto;
+    margin: 10px auto;
+    flex-direction: column;
+  }
+}
