@@ -16,7 +16,6 @@
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
-  background-color: white;
   flex-flow: wrap;
   justify-content: flex-end;
 }
@@ -224,7 +223,6 @@ a {
   display: flex;
   height: auto;
   overflow: hidden;
-  background-color: white;
   flex: 1 1 100%;
   flex-direction: column;
   justify-content: flex-start;
