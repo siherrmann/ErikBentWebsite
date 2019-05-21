@@ -33,26 +33,28 @@ form {
   margin-bottom: 0px;
 }
 
+label {
+  color: #fdfffc;
+}
+
 iframe {
   border: none;
 }
 
 h1 {
-  color: black;
   text-align: center;
   font-weight: 200;
 }
 
-h3 {
-  color: black;
-}
-
-p {
-  font-family: 'Poiret One';
-}
-
+h1,
+h2,
+h3,
+h4,
+li,
+p,
 a {
-  color: black;
+  color: #fdfffc;
+  font-family: 'Poiret One';
 }
 
 .responsive {
@@ -82,9 +84,28 @@ a {
   border: none;
 }
 
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdfffc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* navbar */
 
 .sticky {
+  background-color: #080f17;
   position: sticky;
   top: 0;
   width: 100%;
@@ -107,13 +128,12 @@ a {
 }
 
 .linkTo {
-  color: black;
-  background-color: white;
+  color: #fdfffc;
 }
 
 .start {
   color: white;
-  background-color: #c03221;
+  background-color: #D62828;
 }
 
 .linkTo:hover {
@@ -174,14 +194,14 @@ a {
 .frameLine {
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: #080f17;
 }
 
 .lineBlack {
   width: 66%;
   height: 1px;
   float: right;
-  background-color: #888;
+  background-color: #fdfffc;
 }
 
 @media all and (max-width: 1300px) {
@@ -220,8 +240,9 @@ a {
 
 .headerPicture {
   width: 100%;
-  height: 30vw;
-  background-image: url(../graphics/Haus3.1.svg);
+  height: 20vw;
+  margin: 5% 0 5% 0;
+  background-image: url(../graphics/ErikBentStraightSlim.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -230,12 +251,11 @@ a {
 .headerTextFrame {
   width: 100%;
   height: auto;
-  background-color: white;
 }
 
 .headerText {
   padding: 1%;
-  color: black;
+  color: #fdfffc;
   text-align: center;
   font-family: 'Poiret One';
   font-size: 50px;
@@ -248,36 +268,26 @@ a {
   margin-left: auto;
 }
 
-.scrollToContact,
-.scrollToServices {
-  width: 150px;
-  height: 40px;
+.scrollToAboutMe {
+  width: 300px;
+  height: 50px;
   margin: 20px;
   padding-top: 15px;
-  color: white;
+  color: #080f17;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
-.scrollToContact {
-  background-color: #195757;
+.scrollToAboutMe {
+  background-color: #84DCCF;
 }
 
-.scrollToServices {
-  background-color: #c03221;
-}
-
-.scrollToContact:hover {
+.scrollToAboutMe:hover {
   background-color: #154848;
 }
 
-.scrollToServices:hover {
-  background-color: #9e291c;
-}
-
 @media all and (max-width: 620px) {
-  .scrollToContact,
-  .scrollToServices {
+  .scrollToAboutMe {
     width: 100%;
     margin: 10px;
   }
@@ -314,7 +324,6 @@ a {
 
 .contentSite {
   display: block;
-  color: black;
 }
 
 .contentImprint {
@@ -456,7 +465,6 @@ a {
 }
 
 .contentContact {
-  background-color: white;
 }
 
 label {
@@ -487,12 +495,14 @@ label {
 #subject,
 .g-recaptcha,
 .submit {
+  background-color: #0a141f;
   padding: 5px;
-  border: 1px solid #888;
+  border: 1px solid #fdfffc;
   border-radius: 5px;
   font-family: 'Poiret One';
   font-size: 20px;
   font-weight: 500;
+  color: #fdfffc;
 }
 
 #email,
@@ -532,7 +542,6 @@ label {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background-color: white;
 }
 
 .map {
@@ -611,7 +620,6 @@ label {
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: white;
   flex: 1 1 100%;
   flex-direction: row;
   justify-content: center;
@@ -643,7 +651,7 @@ label {
 .footerCopyright {
   width: 100%;
   color: white;
-  background-color: #666;
+  background-color: #0a141f;
   text-align: center;
   font-size: 14px;
 }
@@ -690,7 +698,6 @@ label {
     width: 100%;
     height: auto;
     overflow: hidden;
-    background-color: white;
     flex: 1 1 100%;
     flex-direction: column;
     justify-content: center;
