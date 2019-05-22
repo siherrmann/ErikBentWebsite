@@ -47,14 +47,9 @@
 
   <body>
     <div class="frame sticky" id="navbar">
-      <a class="linkTo button" href="#info" onfocus="this.blur()">ABOUT ME</a>
-      <a class="linkTo button" href="#services" onfocus="this.blur()"
-        >PROJECTS</a
-      >
+      <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
+      <a class="linkTo button" href="#project1" onfocus="this.blur()">PROJECTS</a>
       <a class="linkTo button" href="#contact" onfocus="this.blur()">CONTACT</a>
-      <a class="linkTo button" href="#location" onfocus="this.blur()"
-        >LOCATION</a
-      >
       <a class="start button" href="#start" onfocus="this.blur()">START</a>
       <div class="responsiveMenu">
         <button
@@ -65,21 +60,10 @@
           ☰
         </button>
         <div id="droppedMenuContent" class="menuContent">
-          <a class="droppedLink button" href="#start" onfocus="this.blur()"
-            >Start</a
-          >
-          <a class="droppedLink button" href="#info" onfocus="this.blur()"
-            >Über uns</a
-          >
-          <a class="droppedLink button" href="#services" onfocus="this.blur()"
-            >Leistungen</a
-          >
-          <a class="droppedLink button" href="#contact" onfocus="this.blur()"
-            >Kontakt</a
-          >
-          <a class="droppedLink button" href="#location" onfocus="this.blur()"
-            >Anfahrt</a
-          >
+          <a class="droppedLink button" href="#start" onfocus="this.blur()">Start</a>
+          <a class="droppedLink button" href="#aboutMe" onfocus="this.blur()">Über uns</a>
+          <a class="droppedLink button" href="#project1" onfocus="this.blur()">Leistungen</a>
+          <a class="droppedLink button" href="#contact" onfocus="this.blur()">Kontakt</a>
         </div>
       </div>
       <div class="frameLine"><div class="lineBlack"></div></div>
@@ -89,21 +73,15 @@
       <div class="headerPicture"></div>
       <div class="headerTextFrame">
         <h1 class="headerText">CREATIVE &nbsp; | &nbsp; DESIGN &nbsp; | &nbsp; MARKETING</h1>
-        <!-- <h1 class="headerText">Erik Bent</h1> -->
         <div class="headerButton">
-          <h2
-            class="scrollToAboutMe button"
-            href="#services"
-            onfocus="this.blur()"
-            >ABOUT ME</h2
-          >
+          <a class="scrollToAboutMe button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
         </div>
       </div>
     </div>
 
-    <div class="content" id="aboutMe">
-      <div class="contentPicture" id="profilePicture"></div>
-      <div class="contentText">
+    <div class="content withBackgroundColor" id="aboutMe">
+      <div class="contentPicture" id="aboutMePicture"></div>
+      <div class="contentText" id="aboutMeText">
         <h2>ABOUT ME</h2>
         <p>
           I first started creating websites with HTML, CSS and Javascript when I was 13. Oh, and small desktop
@@ -121,67 +99,6 @@
           truly enjoying the quietness and music. Spending time with friends helps me to clear my head,
           find a healthy balance and regain my focus for the next challenging task.
         </p>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="contentSlide">
-        <div class="slide picture1">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-        <div class="slide picture2">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-        <div class="slide picture3">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-        <div class="slide picture4">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-        <div class="slide picture5">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-        <div class="slide picture6">
-          <div class="left" onclick="nextPicture(-1)">
-            <div class="textLeftRight">&#10094;</div>
-          </div>
-          <div class="right" onclick="nextPicture(1)">
-            <div class="textLeftRight">&#10095;</div>
-          </div>
-        </div>
-      </div>
-      <div class="text">
-        <span class="dotsTransparent dot" onclick="currentPicture(1)"></span>
-        <span class="dotsTransparent dot" onclick="currentPicture(2)"></span>
-        <span class="dotsTransparent dot" onclick="currentPicture(3)"></span>
-        <span class="dotsTransparent dot" onclick="currentPicture(4)"></span>
-        <span class="dotsTransparent dot" onclick="currentPicture(5)"></span>
-        <span class="dotsTransparent dot" onclick="currentPicture(6)"></span>
       </div>
     </div>
 
@@ -221,7 +138,7 @@
       </div>
     </div>
 
-    <div class="content" id="project2">
+    <div class="content withBackgroundColor" id="project2">
       <div class="contentText">
         <h3>Stellenangebote</h3>
         <h4>Ausbildungsstelle Feinwerkmechaniker Fachrichtung Formenbau</h4>
@@ -231,8 +148,8 @@
       </div>
     </div>
 
-    <div class="content" id="contact">
-      <form class="contentText" method="post" action="scripts/contact.php">
+    <div class="content">
+      <form id="contact" method="post" action="scripts/contact.php">
         <div class="frameMulti">
           <div class="nameFrame">
             <label for="name">NAME</label>

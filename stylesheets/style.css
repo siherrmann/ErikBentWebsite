@@ -17,20 +17,19 @@ html {
 body {
   display: flex;
   margin: 0 auto;
+  background-color: #080f17;
   background-image: url(../graphics/Farbübergang1.png);
   background-attachment: fixed;
+  background-position: right;
   background-size: cover;
   font-family: 'Poiret One';
   font-size: 20px;
   flex-flow: row wrap;
 }
 
-button {
-  font-size: 20px;
-}
-
 form {
   margin-bottom: 0px;
+  width: 100%;
 }
 
 label {
@@ -43,7 +42,6 @@ iframe {
 
 h1 {
   text-align: center;
-  font-weight: 200;
 }
 
 h1,
@@ -266,7 +264,6 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-
 }
 
 .scrollToAboutMe {
@@ -277,6 +274,7 @@ a {
   background-color: #84DCCF;
   border: none;
   border-radius: 50px;
+  font-size: 30px;
 }
 
 .scrollToAboutMe:hover {
@@ -292,10 +290,6 @@ a {
   .headerPicture {
     width: 100%;
     height: 40vw;
-    background-image: url(../graphics/LWLogo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 }
 
@@ -304,13 +298,16 @@ a {
 .content {
   display: inline-flex;
   flex-flow: row wrap;
-  align-items: stretch;
-  align-content: baseline;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  height: auto;
+  height: max-content;
   padding: 50px 17%;
   overflow: hidden;
+}
+
+.withBackgroundColor {
+  background: #0a141f;
 }
 
 .contentPicture {
@@ -319,170 +316,27 @@ a {
   background-size: contain;
   width: 30%;
   height: 100%;
-  float: left;
 }
 
 .contentText {
   width: 60%;
   height: auto;
+}
+
+#aboutMeText,
+#aboutMePicture {
   display: block;
-  flex: 1 1 20%;
-  float: right;
+  flex-flow: column wrap;
+  padding: 10px;
 }
 
-.right {
-}
-
-#aboutMe,
-#project1 {
-  background: #0a141f;
-  display: block;
-}
-
-#contact {
-  width: 100%;
-}
-
-#profilePicture {
-  background-image: url(../graphics/slide1.jpg);
+#aboutMePicture {
+  background-image: url(../graphics/aboutMePicture.jpg);
+  min-height: 400px;
 }
 
 .contentImprint {
   height: 80vh;
-}
-
-.contentInfo,
-.contentServices,
-.contentJobs {
-  background: #0a141f;
-}
-
-.contentSlide {
-  width: 66vw;
-  height: auto;
-  margin: 40px auto 0px auto;
-}
-
-.slide {
-  display: none;
-  height: 40vw;
-}
-
-.picture1,
-.picture2,
-.picture3,
-.picture4,
-.picture5,
-.picture6 {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.picture1 {
-  background-image: url(../graphics/slide1.jpg);
-}
-
-.picture2 {
-  background-image: url(../graphics/slide2.jpg);
-}
-
-.picture3 {
-  background-image: url(../graphics/slide3.jpg);
-}
-
-.picture4 {
-  background-image: url(../graphics/slide4.jpg);
-}
-
-.picture5 {
-  background-image: url(../graphics/slide5.jpg);
-}
-
-.picture6 {
-  background-image: url(../graphics/slide6.jpg);
-}
-
-.left,
-.right {
-  display: flex;
-  -webkit-box-align: center;
-  width: 50%;
-  height: 100%;
-  -webkit-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  cursor: pointer;
-}
-
-.left {
-  float: left;
-  justify-content: flex-start;
-}
-
-.right {
-  float: right;
-  justify-content: flex-end;
-}
-
-.textLeftRight {
-  padding: 20px;
-  color: #666;
-  -moz-user-select: None;
-  -ms-user-select: None;
-  -webkit-user-select: None;
-}
-
-.text {
-  padding: 0px 20px;
-  text-align: center;
-  -moz-user-select: None;
-  -ms-user-select: None;
-  -webkit-user-select: None;
-}
-
-.dotsBlack,
-.dotsTransparent {
-  margin: 10px auto;
-  text-align: center;
-}
-
-.dotsBlack {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  border: 1px solid;
-  border-color: #666;
-  border-radius: 50%;
-  background-color: #888;
-}
-
-.dotsTransparent {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  border: 1px solid;
-  border-color: #888;
-  border-radius: 50%;
-  background-color: transparent;
-}
-
-.dotsBlack:hover,
-.dotsTransparent:hover {
-  background-color: #666;
-  transition: all 0.3s ease-in-out;
-}
-
-.contentPanorama {
-  background-image: url(../graphics/panorama.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 30vw;
-  margin: 0;
 }
 
 label {
@@ -557,6 +411,10 @@ label {
 }
 
 @media all and (max-width: 1500px) {
+  .content {
+    padding: 50px 5%;
+  }
+
   .emailFrame,
   .nameFrame {
     width: 47%;
@@ -568,6 +426,11 @@ label {
 }
 
 @media all and (max-width: 1000px) {
+  .contentText,
+  .contentPicture {
+    width: 100%
+  }
+
   .emailFrame,
   .nameFrame,
   .subjectFrame {
