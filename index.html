@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-70a9a1-40798c -->
+  <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-84dccf-d62828 -->
 
   <head>
     <title>Erik Bent</title>
@@ -100,38 +101,25 @@
       </div>
     </div>
 
-    <div class="content">
-      <div id="info" class="contentInfo">
-        <h2>Herzlich Willkommen</h2>
+    <div class="content" id="aboutMe">
+      <div class="contentPicture" id="profilePicture"></div>
+      <div class="contentText">
+        <h2>ABOUT ME</h2>
         <p>
-          …auf der Website der Lachenmaier Werkzeugbau GmbH in Bietigheim, Ihrem
-          Spezialisten für die Anfertigung von Spritzguss- und
-          Blechverarbeitungswerkzeugen.
+          I first started creating websites with HTML, CSS and Javascript when I was 13. Oh, and small desktop
+          applications with Visual Basic 6. I love solving tricky problems which require detailed thinking
+          to find a solution. At the moment I'm mostly focused on the backend – where I find just the right
+          challenges for my taste.
         </p>
         <p>
-          Unser hochmotiviertes Team aus drei Konstrukteuren und sechs
-          Werkzeugmachern berät Sie bereits in der Entwicklungsphase und bei
-          Bedarf liefern wir auch Muster- und Prototypenteile. Auf Termintreue
-          und hohe Produktqualität können Sie bei uns zählen!
+          My goal is to create a secure and reliable platform for our users. I like fixing errors, thinking about
+          how to avoid those and making our platform more resilient. This is why I want our code to be
+          of high quality, easy to read, maintain and extend.
         </p>
         <p>
-          Mittlerweile wird das Unternehmen von der zweiten Generation
-          mitgeführt.
-        </p>
-        <p>
-          Seit der Firmengründung im Jahre 1985 fertigen wir für namhafte Kunden
-          aus den Geschäftsbereichen:
-        </p>
-        <ul>
-          <li>Automobilindustrie</li>
-          <li>Systemlieferanten der Automobilindustrie</li>
-          <li>Elektroindustrie</li>
-          <li>Medizintechnik</li>
-          <li>Freizeit- und Unterhaltungsbranche</li>
-        </ul>
-        <p>
-          Im Mai 2011 wurde unserem Unternehmen die Zertifizierungsurkunde nach
-          DIN –EN ISO 9001:2008 ausgestellt.
+          Since I'm a creative person hardly a day goes by without me picking up my guitar,
+          truly enjoying the quietness and music. Spending time with friends helps me to clear my head,
+          find a healthy balance and regain my focus for the next challenging task.
         </p>
       </div>
     </div>
@@ -197,8 +185,8 @@
       </div>
     </div>
 
-    <div id="services" class="content">
-      <div class="contentServices">
+    <div class="content" id="project1">
+      <div class="contentText">
         <h3>Unsere Leistungen</h3>
         <p>Unser Leistungsspektrum umfasst:</p>
         <ul>
@@ -233,11 +221,8 @@
       </div>
     </div>
 
-    <div class="content contentPanorama">
-    </div>
-
-    <div id="jobs" class="content">
-      <div class="contentJobs">
+    <div class="content" id="project2">
+      <div class="contentText">
         <h3>Stellenangebote</h3>
         <h4>Ausbildungsstelle Feinwerkmechaniker Fachrichtung Formenbau</h4>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -246,15 +231,15 @@
       </div>
     </div>
 
-    <div id="contact" class="content">
-      <form class="contentContact" method="post" action="scripts/contact.php">
+    <div class="content" id="contact">
+      <form class="contentText" method="post" action="scripts/contact.php">
         <div class="frameMulti">
           <div class="nameFrame">
-            <label for="name">Name</label>
+            <label for="name">NAME</label>
             <input
               type="text"
               id="name"
-              placeholder="Dein Name"
+              placeholder="Your name"
               required=""
               oninvalid="this.setCustomValidity('Gib deinen Namen ein')"
               onchange="this.setCustomValidity('')"
@@ -262,11 +247,11 @@
             />
           </div>
           <div class="emailFrame">
-            <label for="email">Email</label>
+            <label for="email">EMAIL</label>
             <input
               type="text"
               id="email"
-              placeholder="Deine Email-Adresse"
+              placeholder="Your email address"
               required=""
               oninvalid="this.setCustomValidity('Gib deine Email-Adresse ein')"
               onchange="this.setCustomValidity('')"
@@ -274,11 +259,11 @@
             />
           </div>
           <div class="subjectFrame">
-            <label for="subject">Betreff</label>
+            <label for="subject">SUBJECT</label>
             <input
               type="text"
               id="subject"
-              placeholder="Betreff"
+              placeholder="Subject"
               required=""
               oninvalid="this.setCustomValidity('Gib deinen Betreff ein')"
               onchange="this.setCustomValidity('')"
@@ -287,12 +272,12 @@
           </div>
         </div>
         <div class="messageFrame">
-          <label for="message">Nachricht</label>
+          <label for="message">MESSAGE</label>
           <textarea
             rows="10"
             cols="30"
             id="message"
-            placeholder="Deine Nachricht"
+            placeholder="Your message"
             required=""
             oninvalid="this.setCustomValidity('Gib deine Nachricht ein')"
             onchange="this.setCustomValidity('')"
@@ -318,13 +303,6 @@
       </form>
     </div>
 
-    <div id="location" class="content">
-      <div class="contentMap">
-        <iframe class="map" title="lachenmaierLocation"
-        src=https://maps.google.de/maps?hl=de&q=Lachenmaier%20%20Obere+Hardt+19%20Bietigheim&z=14&ie=utf8&output=embed></iframe>
-      </div>
-    </div>
-
     <div class="lineBlack"></div>
 
     <div class="footer">
@@ -332,11 +310,10 @@
         <img src="graphics/location.svg" alt="Adresse" class="footerPicture" />
         <div class="footerText">
           <p>
-            Lachenmaier Werkzeugbau GmbH<br />
+            Simon Herrmann<br />
             Obere Hardt 19<br />
             76467 Bietigheim<br />
-            Mail: info@lachenmaier.org<br />
-            Homepage: www.lachenmaier.org
+            Homepage: www.erikbent.de
           </p>
         </div>
       </div>
@@ -348,14 +325,7 @@
         <img src="graphics/phone.svg" alt="Telefon" class="footerPicture" />
         <div class="footerText">
           <p>
-            Fon 0 72 45 / 91 94 0<br />
-            Mobil 01 72 / 7 23 11 30<br />
-            Fax 0 72 45 / 91 94 15
-          </p>
-
-          <p>
-            DFÜ 0 72 45 / 91 94 16<br />
-            DFÜ 0 72 45 / 91 94 18
+            Fon 0 72 45 / 91 94 0
           </p>
         </div>
       </div>
@@ -363,7 +333,7 @@
 
     <div class="footerCopyright">
       <p>
-        © Lachenmaier Werkzeugbau GmbH<br />
+        © Simon Herrmann<br />
         <a href="imprint.html" style="color: white">Impressum</a>
         <a href="dataProtection.html" style="color: white">Datenschutz</a><br />
         Made with ♥ by
