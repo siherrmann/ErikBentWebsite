@@ -297,13 +297,20 @@ a {
 
 .content {
   display: inline-flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: max-content;
   padding: 50px 17%;
   overflow: hidden;
+}
+
+.wrap {
+  flex-flow: row wrap;
+}
+
+.wrapReverse {
+    flex-flow: row wrap-reverse;
 }
 
 .withBackgroundColor {
@@ -316,15 +323,14 @@ a {
   background-size: contain;
   width: 30%;
   height: 100%;
+  display: block;
+  flex-flow: column wrap;
+  padding: 10px;
 }
 
 .contentText {
   width: 60%;
   height: auto;
-}
-
-#aboutMeText,
-#aboutMePicture {
   display: block;
   flex-flow: column wrap;
   padding: 10px;
@@ -333,6 +339,16 @@ a {
 #aboutMePicture {
   background-image: url(../graphics/aboutMePicture.jpg);
   min-height: 400px;
+}
+
+#skidCatPicture {
+  background-image: url(../graphics/skidCatPicture.jpg);
+  min-height: 600px;
+}
+
+#bearPicture {
+  background-image: url(../graphics/bearPicture.png);
+  min-height: 600px;
 }
 
 .contentImprint {
