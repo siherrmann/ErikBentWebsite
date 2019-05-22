@@ -325,7 +325,7 @@ a {
   height: 100%;
   display: block;
   flex-flow: column wrap;
-  padding: 10px;
+  margin: 20px;
 }
 
 .contentText {
@@ -333,7 +333,7 @@ a {
   height: auto;
   display: block;
   flex-flow: column wrap;
-  padding: 10px;
+  margin: 20px;
 }
 
 #aboutMePicture {
@@ -343,12 +343,12 @@ a {
 
 #skidCatPicture {
   background-image: url(../graphics/skidCatPicture.jpg);
-  min-height: 600px;
+  min-height: 500px;
 }
 
 #bearPicture {
   background-image: url(../graphics/bearPicture.jpg);
-  min-height: 600px;
+  min-height: 300px;
 }
 
 .contentImprint {
