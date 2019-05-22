@@ -263,6 +263,10 @@ a {
 .headerButton {
   max-width: 430px;
   margin: 5% auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
 }
 
 .scrollToAboutMe {
