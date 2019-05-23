@@ -8,7 +8,7 @@ if (isset($_POST['send']) && !empty($POST['send'])) {
   $antwortDaten = json_decode($antwortJSON);
 
   if($antwortDaten->success){
-    mail("info@lachenmaier.org", "$subject - Nachricht von $name", $nachricht, "From: $email");
+    mail("Simon.He3@gmail.com", "$subject - Nachricht von $name", $nachricht, "From: $email");
 
     // Betreff
     $betreff = 'Vielen Dank für Ihre Nachricht';
@@ -22,7 +22,7 @@ if (isset($_POST['send']) && !empty($POST['send'])) {
 
     // zusätzliche Header
     $header[] = 'To: $email';
-    $header[] = 'From: Lachenmaier Werkzeugbau GmbH <info@lachenmaier.org>';
+    $header[] = 'From: Simon <Simon.He3@gmail.com>';
 
     // verschicke die E-Mail
     mail($email, $betreff, $nachricht, implode("\r\n", $header));
