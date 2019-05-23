@@ -70,7 +70,7 @@ a {
   cursor: pointer;
 }
 
-.frameMulti {
+.frameRowMulti {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -252,9 +252,14 @@ a {
 
 .headerText {
   padding: 1%;
-  color: #fdfffc;
   text-align: center;
-  font-family: 'Poiret One';
+  font-size: 50px;
+}
+
+.headerTextSlim {
+  display: none;
+  padding: 1%;
+  text-align: center;
   font-size: 50px;
 }
 
@@ -293,10 +298,25 @@ a {
   }
 }
 
+@media all and (max-width: 880px) {
+  .header {
+    height: auto;
+    padding: 100px 0px;
+  }
+
+  .headerText {
+    display: none;
+  }
+
+  .headerTextSlim {
+    display: block;
+  }
+}
+
 /* content */
 
 .content {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -513,17 +533,13 @@ label {
 .footer {
   display: flex;
   width: 100%;
-  height: auto;
   overflow: hidden;
-  flex: 1 1 100%;
-  flex-direction: row;
   justify-content: center;
 }
 
 .footerPartFrame {
   display: flex;
   width: 280px;
-  height: auto;
   margin: 10px 20px;
   flex-direction: column;
 }
@@ -569,16 +585,11 @@ label {
 .cookieButton {
   width: 200px;
   height: 50px;
-  margin: 10px 0px;
-  padding: 5px;
-  color: #080f17;
-  border: none;
+  padding: 5px 20px;
   border-radius: 50px;
+  font-size: 20px;
+  color: #080f17;
   background-color: #84DCCF;
-  text-align: center;
-  font-family: 'Poiret One';
-  font-size: 16px;
-  font-weight: 200;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -591,9 +602,7 @@ label {
   .footer {
     display: flex;
     width: 100%;
-    height: auto;
     overflow: hidden;
-    flex: 1 1 100%;
     flex-direction: column;
     justify-content: center;
   }
@@ -601,7 +610,6 @@ label {
   .footerPartFrame {
     display: flex;
     width: 250px;
-    height: auto;
     margin: 10px auto;
     flex-direction: column;
   }

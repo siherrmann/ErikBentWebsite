@@ -67,6 +67,7 @@
       <div class="headerPicture"></div>
       <div class="headerTextFrame">
         <h1 class="headerText">CREATIVE &nbsp; | &nbsp; DESIGN &nbsp; | &nbsp; MARKETING</h1>
+        <h1 class="headerTextSlim">CREATIVE</br>DESIGN</br>MARKETING</h1>
         <div class="headerButton">
           <a class="scrollToAboutMe button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
         </div>
@@ -126,7 +127,7 @@
 
     <div class="content wrap">
       <form id="contact" method="post" action="scripts/contact.php">
-        <div class="frameMulti">
+        <div class="frameRowMulti">
           <div class="nameFrame">
             <label for="name">NAME</label>
             <input
@@ -212,13 +213,13 @@
       </div>
       <div class="footerPartFrame">
         <img src="graphics/email.svg" alt="Email" class="footerPicture" />
-        <div class="footerText"><p>Mail: info@lachenmaier.org</p></div>
+        <div class="footerText"><p>Mail: erikbent@contact.de</p></div>
       </div>
       <div class="footerPartFrame">
         <img src="graphics/phone.svg" alt="Telefon" class="footerPicture" />
         <div class="footerText">
           <p>
-            Fon 0 72 45 / 91 94 0
+            Fon
           </p>
         </div>
       </div>
@@ -240,24 +241,22 @@
       </p>
     </div>
 
-    <?php $cookie_set = $_COOKIE["setCookieHinweis"]; if ($cookie_set != "set")
-    { ?>
+    <?php
+      $value = 'true';
+      setcookie("cookiesAccepted", $value, time()+3600);
+      if (!isset($_COOKIE['cookiesAccepted'])) {
+    ?>
 
     <div id="cookie-popup">
-      <span class="hinweis"
-        >We use cookies. By continuing to use the website, you agree to the use of cookies.<br
-      /></span>
-      <span class="more-info"
-        ><a href="/dataProtection.html" style="color: white"
-          >Further information</a
-        ></span
-      >
-      <button class="cookieButton" onclick="cookieOk()">
-        OK, I agree.
-      </button>
+      <span class="hinweis">We use cookies. By continuing to use the website, you agree to the use of cookies.<br/>
+      </span>
+      <span class="more-info"><a href="/dataProtection.html" style="color: white">Further information</a><br/><br/></span>
+      <a class="cookieButton" onclick="cookieOk()">OK, I agree.</a>
     </div>
 
-    <?php }; ?>
+    <?php
+      };
+    ?>
 
     <script type="text/javascript" src="scripts/scripts.js" async></script>
     <script src="https://www.google.com/recaptcha/api.js" defer></script>
