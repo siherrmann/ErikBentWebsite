@@ -7,8 +7,8 @@ function cookieOk() {
   var enddate = now.toUTCString();
 
   document.cookie =
-    "setCookieHinweis = set; path=/; secure; expires=" + enddate;
-  document.getElementById("cookie-popup").style.display = "none";
+    "cookiesAccepted = set; path=/; secure; expires=" + enddate;
+  document.getElementById("cookiePopup").style.display = "none";
 }
 
 function dropMenu() {

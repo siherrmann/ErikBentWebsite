@@ -242,12 +242,10 @@
     </div>
 
     <?php
-      $value = 'true';
-      setcookie("cookiesAccepted", $value, time()+3600);
       if (!isset($_COOKIE['cookiesAccepted'])) {
     ?>
 
-    <div id="cookie-popup">
+    <div id="cookiePopup">
       <span class="hinweis">We use cookies. By continuing to use the website, you agree to the use of cookies.<br/>
       </span>
       <span class="more-info"><a href="/dataProtection.html" style="color: white">Further information</a><br/><br/></span>
