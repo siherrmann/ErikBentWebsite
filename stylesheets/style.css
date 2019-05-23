@@ -558,8 +558,8 @@ label {
   left: 0;
   width: 250px;
   padding: 20px;
-  color: white;
-  background: #666;
+  color: #fdfffc;
+  background: #0a141f;
   text-align: center;
   font-family: 'Poiret One';
   font-size: 16px;
@@ -571,10 +571,10 @@ label {
   height: 50px;
   margin: 10px 0px;
   padding: 5px;
-  color: white;
+  color: #080f17;
   border: none;
-  border-radius: 5px;
-  background-color: #195757;
+  border-radius: 50px;
+  background-color: #84DCCF;
   text-align: center;
   font-family: 'Poiret One';
   font-size: 16px;
