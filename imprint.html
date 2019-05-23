@@ -25,19 +25,17 @@
   <body id="site">
 
     <div class="frame sticky" id="navbar">
-      <button class="linkTo button" onclick="window.location.href='index.html#info'" onfocus="this.blur()">Über uns</button>
-      <button class="linkTo button" onclick="window.location.href='index.html#services'" onfocus="this.blur()">Leistungen</button>
-      <button class="linkTo button" onclick="window.location.href='index.html#contact'" onfocus="this.blur()">Kontakt</button>
-      <button class="linkTo button" onclick="window.location.href='index.html#location'" onfocus="this.blur()">Anfahrt</button>
-      <button class="start button" onclick="window.location.href='index.html'" onfocus="this.blur()">Start</button>
+      <a class="linkTo button" onclick="window.location.href='index.html#aboutMe'" onfocus="this.blur()">ABOUT ME</a>
+      <a class="linkTo button" onclick="window.location.href='index.html#skidCat'" onfocus="this.blur()">PROJECTS</a>
+      <a class="linkTo button" onclick="window.location.href='index.html#contact'" onfocus="this.blur()">CONTACT</a>
+      <a class="start button" onclick="window.location.href='index.html'" onfocus="this.blur()">START</a>
       <div class="responsiveMenu">
-        <button class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</button>
+        <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
         <div id="droppedMenuContent" class="menuContent">
-          <button class="droppedLink button" onclick="window.location.href='index.html'" onfocus="this.blur()">Start</button>
-          <button class="droppedLink button" onclick="window.location.href='index.html#info'" onfocus="this.blur()">Über uns</button>
-          <button class="droppedLink button" onclick="window.location.href='index.html#services'" onfocus="this.blur()">Leistungen</button>
-          <button class="droppedLink button" onclick="window.location.href='index.html#contact'" onfocus="this.blur()">Kontakt</button>
-          <button class="droppedLink button" onclick="window.location.href='index.html#location'" onfocus="this.blur()">Anfahrt</button>
+          <a class="droppedLink button" onclick="window.location.href='index.html'" onfocus="this.blur()">START</a>
+          <a class="droppedLink button" onclick="window.location.href='index.html#aboutMe'" onfocus="this.blur()">ABOUT ME</a>
+          <a class="droppedLink button" onclick="window.location.href='index.html#skidCat'" onfocus="this.blur()">PROJECTS</a>
+          <a class="droppedLink button" onclick="window.location.href='index.html#contact'" onfocus="this.blur()">CONTACT</a>
         </div>
       </div>
       <div class="frameLine">
@@ -50,18 +48,11 @@
     <div class="content">
       <div class="contentImprint">
         <h2>Impressum</h2>
-        <p>Lachenmaier Werkzeugbau GmbH<br>
-        Obere Hardt 19<br>
-        76467 Bietigheim<br>
-        Mail: info@lachenmaier.org<br>
-        Homepage: <a href="index.html">www.lachenmaier.org</a></p>
-        <p>Geschäftsführer: Klaus Lachenmaier und Ralph Lachenmaier<br>
-        Inhaber: Klaus Lachenmaier<br>
-        Geschäftsform: GmbH<br>
-        Registerart: Handelsregister<br>
-        Register/Ort: Amtsgericht Mannheim<br>
-        Registernummer: HRB 522299<br>
-        Zuständige Kammer: Handwerkskammer Karlsruhe, Außenstelle Baden-Baden <br>
+        <p>Simon Herrmann<br>
+        Ringstraße 6a<br>
+        76287 Rheinstetten<br>
+        Mail: erikbent@contact.de<br>
+        Homepage: <a href="index.html">www.erikbent.org</a><br>
         USt-IdNr: DE 229 837 416</p>
         <h3></h3>
       </div>
@@ -71,40 +62,44 @@
 
     <div class="footer">
       <div class="footerPartFrame">
-        <img src="graphics/location.svg" alt="Adresse" class="footerPicture">
+        <img src="graphics/location.svg" alt="Adresse" class="footerPicture" />
         <div class="footerText">
-          <p>Lachenmaier Werkzeugbau GmbH<br>
-          Obere Hardt 19<br>
-          76467 Bietigheim<br>
-          Mail: info@lachenmaier.org<br>
-          Homepage: www.lachenmaier.org</p>
+          <p>
+            Simon Herrmann<br />
+            Obere Hardt 19<br />
+            76467 Bietigheim<br />
+            Homepage: www.erikbent.de
+          </p>
         </div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/email.svg" alt="Email" class="footerPicture">
-        <div class="footerText">
-          <p>Mail: info@lachenmaier.org</p>
-        </div>
+        <img src="graphics/email.svg" alt="Email" class="footerPicture" />
+        <div class="footerText"><p>Mail: info@lachenmaier.org</p></div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/phone.svg" alt="Telefon" class="footerPicture">
+        <img src="graphics/phone.svg" alt="Telefon" class="footerPicture" />
         <div class="footerText">
-          <p>Fon 0 72 45 / 91 94 0<br>
-            Mobil 01 72 / 7 23 11 30<br>
-            Fax 0 72 45 / 91 94 15</p>
-
-          <p>DFÜ 0 72 45 / 91 94 16<br>
-            DFÜ 0 72 45 / 91 94 18</p>
+          <p>
+            Fon 0 72 45 / 91 94 0
+          </p>
         </div>
       </div>
     </div>
 
     <div class="footerCopyright">
-      <p>© Lachenmaier Werkzeugbau GmbH<br>
+      <p>
+        © Simon Herrmann<br />
         <a href="imprint.html" style="color: white">Impressum</a>
-        <a href="dataProtection.html" style="color: white">Datenschutz</a><br>
-        Made with ♥ by <a href="https://github.com/siherrmann" style="color: white" target="_blank" rel="noopener">siherrmann</a><br></p>
+        <a href="dataProtection.html" style="color: white">Datenschutz</a><br />
+        Made with ♥ by
+        <a
+          href="https://github.com/siherrmann"
+          style="color: white"
+          target="_blank"
+          rel="noopener"
+          >siherrmann</a
+        ><br />
+      </p>
     </div>
-
   </body>
 </html>
