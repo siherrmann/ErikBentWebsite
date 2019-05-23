@@ -48,22 +48,16 @@
   <body>
     <div class="frame sticky" id="navbar">
       <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
-      <a class="linkTo button" href="#project1" onfocus="this.blur()">PROJECTS</a>
+      <a class="linkTo button" href="#skidCat" onfocus="this.blur()">PROJECTS</a>
       <a class="linkTo button" href="#contact" onfocus="this.blur()">CONTACT</a>
       <a class="start button" href="#start" onfocus="this.blur()">START</a>
       <div class="responsiveMenu">
-        <button
-          class="dropMenu button"
-          onclick="dropMenu()"
-          onfocus="this.blur()"
-        >
-          ☰
-        </button>
+        <button class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</button>
         <div id="droppedMenuContent" class="menuContent">
-          <a class="droppedLink button" href="#start" onfocus="this.blur()">Start</a>
-          <a class="droppedLink button" href="#aboutMe" onfocus="this.blur()">Über uns</a>
-          <a class="droppedLink button" href="#project1" onfocus="this.blur()">Leistungen</a>
-          <a class="droppedLink button" href="#contact" onfocus="this.blur()">Kontakt</a>
+          <a class="droppedLink button" href="#start" onfocus="this.blur()">START</a>
+          <a class="droppedLink button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
+          <a class="droppedLink button" href="#skidCat" onfocus="this.blur()">PROJECTS</a>
+          <a class="droppedLink button" href="#contact" onfocus="this.blur()">CONTACT</a>
         </div>
       </div>
       <div class="frameLine"><div class="lineBlack"></div></div>
@@ -97,7 +91,7 @@
     </div>
 
     <div class="content wrapReverse" id="skidCat">
-      <div class="contentText">
+      <div class="contentText" id="skidCatText">
         <h2>SKIDCAT</h2>
         <p>SkidCat is a simple game for in between. The goal of the game is to steer a cat, which has been
           kicked away by an aggressive boy, through obstacles and to get as far as possible without hitting them.</p>
@@ -118,7 +112,7 @@
 
     <div class="content wrap withBackgroundColor" id="bear">
       <div class="contentPicture" id="bearPicture"></div>
-      <div class="contentText">
+      <div class="contentText" id="bearText">
         <h2>BEAR</h2>
         <p>This game is not finished yet. The landscape and the game character in low poly optics
           are ready so that a large part of the 3D objects is already created. Also, the animations and control

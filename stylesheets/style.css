@@ -134,7 +134,7 @@ a {
 }
 
 .linkTo:hover {
-  background-color: #ccc;
+  background-color: #0a141f;
 }
 
 .start:hover {
@@ -176,12 +176,12 @@ a {
   padding: 12px 0px;
   border: none;
   border-radius: 5px;
-  background-color: white;
+  background-color: #fdfffc;
   text-decoration: none;
 }
 
 .droppedLink:hover {
-  background-color: #ccc;
+  background-color: #0a141f;
 }
 
 .drop {
@@ -228,7 +228,7 @@ a {
 
 .header {
   display: flex;
-  height: auto;
+  height: 90vh;
   overflow: hidden;
   flex: 1 1 100%;
   flex-direction: column;
@@ -300,7 +300,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: max-content;
+  height: 80vh;
   padding: 50px 17%;
   overflow: hidden;
 }
@@ -321,7 +321,6 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 30%;
   height: 100%;
   display: block;
   flex-flow: column wrap;
@@ -329,26 +328,44 @@ a {
 }
 
 .contentText {
-  width: 60%;
   height: auto;
   display: block;
   flex-flow: column wrap;
   margin: 20px;
 }
 
+#aboutMeText,
+#skidCatText {
+  width: 60%;
+}
+
+#bearText {
+  width: 40%;
+}
+
 #aboutMePicture {
   background-image: url(../graphics/aboutMePicture.jpg);
   min-height: 400px;
+  width: 30%;
 }
 
 #skidCatPicture {
   background-image: url(../graphics/skidCatPicture.jpg);
   min-height: 500px;
+  width: 30%;
 }
 
 #bearPicture {
   background-image: url(../graphics/bearPicture.jpg);
   min-height: 300px;
+  width: 50%;
+}
+
+#contact {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .contentImprint {
@@ -402,7 +419,7 @@ label {
 
 #message {
   max-width: 100%;
-  height: 260px;
+  height: 400px;
 }
 
 .g-recaptcha {
@@ -468,14 +485,6 @@ label {
     overflow: hidden;
     font-family: 'Poiret One';
     flex-direction: column;
-  }
-
-  .contentSlide {
-    width: 100%;
-  }
-
-  .slide {
-    height: 70vw;
   }
 
   .g-recaptcha,
