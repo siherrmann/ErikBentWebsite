@@ -6,7 +6,7 @@ body {
   display: flex;
   margin: 0 auto;
   background-color: #080f17;
-  background-image: url(../graphics/Farbübergang1.jpg);
+  background-image: url(../graphics/coloredBackground.jpg);
   background-attachment: fixed;
   background-position: right;
   background-size: cover;
