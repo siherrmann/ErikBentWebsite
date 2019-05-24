@@ -1,15 +1,3 @@
-#navbar {
-  z-index: 10;
-  display: flex;
-  width: 100%;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: hidden;
-  flex-flow: wrap;
-  justify-content: flex-end;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,18 +20,11 @@ form {
   width: 100%;
 }
 
-label {
-  color: #fdfffc;
-}
-
 iframe {
   border: none;
 }
 
-h1 {
-  text-align: center;
-}
-
+label,
 h1,
 h2,
 h3,
@@ -55,12 +36,6 @@ a {
   font-family: 'Poiret One';
 }
 
-.responsive {
-  width: auto;
-  max-width: 500px;
-  height: 100%;
-}
-
 .button {
   text-align: center;
   text-decoration: none;
@@ -70,10 +45,21 @@ a {
   cursor: pointer;
 }
 
+.picture {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .frameRowMulti {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.frameColumnMulti {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .frame {
@@ -100,6 +86,18 @@ a {
 }
 
 /* navbar */
+
+#navbar {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  flex-flow: wrap;
+  justify-content: flex-end;
+}
 
 .sticky {
   background-color: #080f17;
@@ -176,7 +174,7 @@ a {
   padding: 12px 0px;
   border: none;
   border-radius: 5px;
-  background-color: #fdfffc;
+  background-color: #080f17;
   text-decoration: none;
 }
 
@@ -205,7 +203,7 @@ a {
   .linkTo,
   .start {
     width: 14vw;
-    min-width: 80px;
+    min-width: 100px;
     margin: 1vw;
   }
 }
@@ -227,27 +225,21 @@ a {
 /* header */
 
 .header {
-  display: flex;
   height: 90vh;
+  width: 100%;
   overflow: hidden;
-  flex: 1 1 100%;
-  flex-direction: column;
   justify-content: center;
 }
 
 .headerPicture {
   width: 100%;
   height: 20vw;
-  margin: 5% 0 5% 0;
+  margin: 5% 0;
   background-image: url(../graphics/ErikBentStraightSlim.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .headerTextFrame {
   width: 100%;
-  height: auto;
 }
 
 .headerText {
@@ -264,20 +256,14 @@ a {
 }
 
 .headerButton {
-  max-width: 430px;
+  width: max-content;
   margin: 5% auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
 }
 
 .scrollToAboutMe {
-  width: 300px;
-  height: 50px;
-  padding-top: 15px;
+  padding: 15px 60px;
   color: #080f17;
   background-color: #84DCCF;
-  border: none;
   border-radius: 50px;
   font-size: 30px;
 }
@@ -301,7 +287,7 @@ a {
 @media all and (max-width: 880px) {
   .header {
     height: auto;
-    padding: 100px 0px;
+    padding: 50px 0px;
   }
 
   .headerText {
@@ -338,9 +324,6 @@ a {
 }
 
 .contentPicture {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   height: 100%;
   display: block;
   flex-flow: column wrap;
@@ -386,32 +369,23 @@ a {
   flex-flow: column wrap;
   justify-content: center;
   height: 100%;
+  padding: 20px;
 }
 
 .contentImprint {
   height: 80vh;
 }
 
-label {
-  margin-left: 10px;
-}
-
 .emailFrame,
 .nameFrame,
 .subjectFrame {
-  display: flex;
   width: 32%;
-  height: auto;
-  margin-top: 10px;
-  flex-direction: column;
+  margin: 10px 0px;
 }
 
 .messageFrame {
-  display: flex;
   width: 100%;
-  height: auto;
   margin: 10px 0px;
-  flex-direction: column;
 }
 
 #email,
@@ -492,19 +466,18 @@ label {
 }
 
 @media all and (max-width: 880px) {
-  .contentAboutUs1,
-  .contentAboutUs2 {
+  #aboutMeText,
+  #skidCatText,
+  #bearText,
+  #aboutMePicture,
+  #skidCatPicture,
+  #bearPicture {
     width: 100%;
-    max-width: 100%;
-    text-align: center;
   }
 
-  .contentContact {
-    display: flex;
-    padding: 50px 2%;
-    overflow: hidden;
-    font-family: 'Poiret One';
-    flex-direction: column;
+  .content {
+    height: max-content;
+    padding: 50px 0px;
   }
 
   .g-recaptcha,
@@ -513,18 +486,6 @@ label {
     float: none;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .contentContact,
-  .contentInfo,
-  .contentServices,
-  .contentSite,
-  .contentJobs {
-    display: flex;
-    padding: 30px 10%;
-    overflow: hidden;
-    font-family: 'Poiret One';
-    flex-direction: column;
   }
 }
 
