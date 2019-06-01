@@ -79,6 +79,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: #fdfffc;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
