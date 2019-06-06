@@ -25,8 +25,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="frame sticky" id="navbar">
+  <body class="en">
+    <div class="frame sticky" id="navbar" lang="en">
       <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
       <a class="linkTo button" href="#skidCat" onfocus="this.blur()">PROJECTS</a>
       <a class="linkTo button" href="#contact" onfocus="this.blur()">CONTACT</a>
@@ -43,23 +43,47 @@
       <div class="frameLine"><div class="lineWhite"></div></div>
     </div>
 
-    <div class="switchFrame">
+    <div class="frame sticky" id="navbar" lang="de">
+      <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+      <a class="linkTo button" href="#skidCat" onfocus="this.blur()">PROJEKTE</a>
+      <a class="linkTo button" href="#contact" onfocus="this.blur()">KONTAKT</a>
+      <a class="start button" href="#start" onfocus="this.blur()">START</a>
+      <div class="responsiveMenu">
+        <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
+        <div id="droppedMenuContent" class="menuContent">
+          <a class="droppedLink button" href="#start" onfocus="this.blur()">START</a>
+          <a class="droppedLink button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+          <a class="droppedLink button" href="#skidCat" onfocus="this.blur()">PROJEKTE</a>
+          <a class="droppedLink button" href="#contact" onfocus="this.blur()">KONTAKT</a>
+        </div>
+      </div>
+      <div class="frameLine"><div class="lineWhite"></div></div>
+    </div>
+
+    <div class="switchFrame" lang="en de">
       <p>English</p>
       <label class="switch">
-    	  <input type="checkbox" name="language" value="language">
+    	  <input id="switchLanguage" type="checkbox" name="language" value="language" onclick="languageSet()">
   	    <span class="slider"></span>
       </label>
       <p>Deutsch</p>
     </div>
 
-    <div class="header frameColumnMulti" id="start">
+    <div class="header frameColumnMulti" id="start" lang="en">
       <div class="headerPictureFrame picture"></div>
       <h1 class="headerText">CREATIVE &nbsp; | &nbsp; MARKETING &nbsp; | &nbsp; DESIGN</h1>
       <h1 class="headerTextSlim">CREATIVE</br>MARKETING</br>DESIGN</h1>
       <a class="scrollToAboutMe button" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
     </div>
 
-    <div class="content wrap withBackgroundColor" id="aboutMe">
+    <div class="header frameColumnMulti" id="start" lang="de">
+      <div class="headerPictureFrame picture"></div>
+      <h1 class="headerText">CREATIVE &nbsp; | &nbsp; MARKETING &nbsp; | &nbsp; DESIGN</h1>
+      <h1 class="headerTextSlim">CREATIVE</br>MARKETING</br>DESIGN</h1>
+      <a class="scrollToAboutMe button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+    </div>
+
+    <div class="content wrap withBackgroundColor" id="aboutMe" lang="en">
       <div class="contentPicture picture" id="aboutMePicture"></div>
       <div class="contentText" id="aboutMeText">
         <h2>ABOUT ME</h2>
@@ -76,7 +100,24 @@
       </div>
     </div>
 
-    <div class="content wrapReverse" id="skidCat">
+    <div class="content wrap withBackgroundColor" id="aboutMe" lang="de">
+      <div class="contentPicture picture" id="aboutMePicture"></div>
+      <div class="contentText" id="aboutMeText">
+        <h2>ÜBER MICH</h2>
+        <p>I first started creating websites with HTML, CSS and Javascript when I was 13. Oh, and small desktop
+          applications with Visual Basic 6. I love solving tricky problems which require detailed thinking
+          to find a solution. At the moment I'm mostly focused on the backend – where I find just the right
+          challenges for my taste.</p>
+        <p>My goal is to create a secure and reliable platform for our users. I like fixing errors, thinking about
+          how to avoid those and making our platform more resilient. This is why I want our code to be
+          of high quality, easy to read, maintain and extend.</p>
+        <p>Since I'm a creative person hardly a day goes by without me picking up my guitar,
+          truly enjoying the quietness and music. Spending time with friends helps me to clear my head,
+          find a healthy balance and regain my focus for the next challenging task.</p>
+      </div>
+    </div>
+
+    <div class="content wrapReverse" id="skidCat" lang="en de">
       <div class="contentText" id="skidCatText">
         <h2>SKIDCAT</h2>
         <p>SkidCat is a simple game for in between. The goal of the game is to steer a cat, which has been
@@ -98,7 +139,7 @@
       <div class="contentPicture picture" id="skidCatPicture"></div>
     </div>
 
-    <div class="content wrap withBackgroundColor" id="bear">
+    <div class="content wrap withBackgroundColor" id="bear" lang="en de">
       <div class="contentPicture picture" id="bearPicture"></div>
       <div class="contentText" id="bearText">
         <h2>BEAR</h2>
@@ -112,7 +153,7 @@
       </div>
     </div>
 
-    <div class="content wrap">
+    <div class="content wrap" lang="en">
       <form id="contact" method="post" action="scripts/contact.php">
         <div class="frameRowMulti">
           <div class="nameFrame frameColumnMulti">
@@ -122,7 +163,7 @@
               id="name"
               placeholder="Your name"
               required=""
-              oninvalid="this.setCustomValidity('Gib deinen Namen ein')"
+              oninvalid="this.setCustomValidity('Please insert your name')"
               onchange="this.setCustomValidity('')"
               value=""
             />
@@ -134,7 +175,7 @@
               id="email"
               placeholder="Your email address"
               required=""
-              oninvalid="this.setCustomValidity('Gib deine Email-Adresse ein')"
+              oninvalid="this.setCustomValidity('Please insert your email address')"
               onchange="this.setCustomValidity('')"
               value=""
             />
@@ -146,7 +187,7 @@
               id="subject"
               placeholder="Subject"
               required=""
-              oninvalid="this.setCustomValidity('Gib deinen Betreff ein')"
+              oninvalid="this.setCustomValidity('Please insert a subject')"
               onchange="this.setCustomValidity('')"
               value=""
             />
@@ -159,6 +200,78 @@
             cols="30"
             id="message"
             placeholder="Your message"
+            required=""
+            oninvalid="this.setCustomValidity('Please insert your message')"
+            onchange="this.setCustomValidity('')"
+          ></textarea>
+        </div>
+        <div class="frame">
+          <div
+            class="g-recaptcha"
+            data-theme="dark"
+            data-sitekey="6LcKjHoUAAAAAEJ4Rpq3dAIeghxt14kewGdvac3C"
+          ></div>
+        </div>
+        <div class="frame">
+          <button
+            class="submit button"
+            type="submit"
+            name="send"
+            onfocus="this.blur()"
+          >
+            SEND
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="content wrap" lang="de">
+      <form id="contact" method="post" action="scripts/contact.php">
+        <div class="frameRowMulti">
+          <div class="nameFrame frameColumnMulti">
+            <label for="name">NAME</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Dein Name"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deinen Namen ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="emailFrame frameColumnMulti">
+            <label for="email">EMAIL</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Deine Email-Adresse"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deine Email-Adresse ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="subjectFrame frameColumnMulti">
+            <label for="subject">BETREFF</label>
+            <input
+              type="text"
+              id="subject"
+              placeholder="Betreff"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deinen Betreff ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="messageFrame frameColumnMulti">
+          <label for="message">NACHRICHT</label>
+          <textarea
+            rows="10"
+            cols="30"
+            id="message"
+            placeholder="Deine Nachricht"
             required=""
             oninvalid="this.setCustomValidity('Gib deine Nachricht ein')"
             onchange="this.setCustomValidity('')"
@@ -178,15 +291,15 @@
             name="send"
             onfocus="this.blur()"
           >
-            Absenden
+            ABSENDEN
           </button>
         </div>
       </form>
     </div>
 
-    <div class="lineWhite"></div>
+    <div class="lineWhite" lang="en de"></div>
 
-    <div class="footer">
+    <div class="footer" lang="en de">
       <div class="footerPartFrame">
         <img src="graphics/location.svg" alt="Adresse" class="footerPicture" />
         <div class="footerText">
@@ -212,7 +325,23 @@
       </div>
     </div>
 
-    <div class="footerCopyright">
+    <div class="footerCopyright" lang="en">
+      <p>
+        © Simon Herrmann<br />
+        <a href="imprint.html" style="color: white">Imprint</a>
+        <a href="dataProtection.html" style="color: white">Data protection</a><br />
+        Made with ♥ by
+        <a
+          href="https://github.com/siherrmann"
+          style="color: white"
+          target="_blank"
+          rel="noopener"
+          >siherrmann</a
+        ><br />
+      </p>
+    </div>
+
+    <div class="footerCopyright" lang="de">
       <p>
         © Simon Herrmann<br />
         <a href="imprint.html" style="color: white">Impressum</a>
@@ -232,11 +361,15 @@
       if (!isset($_COOKIE['cookiesAccepted'])) {
     ?>
 
-    <div id="cookiePopup">
-      <span class="hinweis">We use cookies. By continuing to use the website, you agree to the use of cookies.<br/>
+    <div id="cookiePopup" lang="en de">
+      <span class="hinweis" lang="en">We use cookies. By continuing to use the website, you agree to the use of cookies.<br/>
       </span>
-      <span class="more-info"><a href="/dataProtection.html" style="color: white">Further information</a><br/><br/></span>
-      <a class="cookieButton" onclick="cookieOk()">OK, I agree.</a>
+      <span class="hinweis" lang="de">Diese Webseite nutzt Cookies, um bestmögliche Funktionalität bieten zu können.<br/>
+      </span>
+      <span class="more-info" lang="en"><a href="/dataProtection.html" style="color: white">Further information</a><br/><br/></span>
+      <span class="more-info" lang="de"><a href="/dataProtection.html" style="color: white">Weitere Informationen</a><br/><br/></span>
+      <a class="cookieButton" onclick="cookieOk()" lang="en">OK, I agree.</a>
+      <a class="cookieButton" onclick="cookieOk()" lang="de">Ok, verstanden.</a>
     </div>
 
     <?php

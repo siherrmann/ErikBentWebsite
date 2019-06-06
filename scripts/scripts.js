@@ -1,4 +1,5 @@
 function cookieOk() {
+  console.log("hier komme ich an (2)");
   var now = new Date(); // Variable für aktuelles Datum
   var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
   var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
@@ -9,6 +10,24 @@ function cookieOk() {
   document.cookie =
     "cookiesAccepted = set; path=/; secure; expires=" + enddate;
   document.getElementById("cookiePopup").style.display = "none";
+}
+
+function languageSet() {
+  console.log("hier komme ich an");
+  if (document.getElementById("switchLanguage").checked){
+    document.body.className = "de"
+    var now = new Date(); // Variable für aktuelles Datum
+    var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
+    var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
+
+    now.setTime(deleteCookie);
+    var enddate = now.toUTCString();
+
+    document.cookie =
+      "languageSet = set; path=/; secure; expires=" + enddate;
+  } else {
+    document.body.className = "en"
+  }
 }
 
 function dropMenu() {
