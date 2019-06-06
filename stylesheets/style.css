@@ -231,7 +231,7 @@ a {
   height: 30px;
 }
 
-input {
+.switch input {
   display: none;
 }
 
