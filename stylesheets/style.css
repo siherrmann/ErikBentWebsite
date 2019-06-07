@@ -290,7 +290,8 @@ input:checked + .slider:before {
 
 .header {
   padding: 100px 0px;
-  height: 70vh;
+  min-height: 70vh;
+  height: max-content;
   width: 100%;
   overflow: hidden;
   justify-content: space-around;
