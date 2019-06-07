@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  letter-spacing: 1px;
+  font-weight: 200;
 }
 
 body.en :lang(de) {
@@ -18,7 +20,7 @@ body {
   background-attachment: fixed;
   background-position: right;
   background-size: cover;
-  font-family: 'Poiret One';
+  font-family: 'Dosis';
   font-size: 20px;
   flex-flow: row wrap;
 }
@@ -41,13 +43,17 @@ li,
 p,
 a {
   color: #fdfffc;
-  font-family: 'Poiret One';
+  font-family: 'Dosis';
+}
+
+h2 {
+  letter-spacing: 4px;
 }
 
 .button {
   text-align: center;
   text-decoration: none;
-  font-family: 'Poiret One';
+  font-family: 'Dosis';
   transition: all 0.3s ease-in-out;
   font-size: 20px;
   cursor: pointer;
@@ -301,6 +307,8 @@ input:checked + .slider:before {
   padding: 1%;
   text-align: center;
   font-size: 40px;
+  letter-spacing: 20px;
+  font-weight: 200;
 }
 
 .headerTextSlim {
@@ -308,6 +316,8 @@ input:checked + .slider:before {
   padding: 1%;
   text-align: center;
   font-size: 40px;
+  letter-spacing: 20px;
+  font-weight: 200;
 }
 
 .scrollToAboutMe {
@@ -340,7 +350,7 @@ input:checked + .slider:before {
   }
 }
 
-@media all and (max-width: 880px) {
+@media all and (max-width: 1400px) {
   .headerText {
     display: none;
   }
@@ -458,7 +468,7 @@ input:checked + .slider:before {
   padding: 5px;
   border: 1px solid #fdfffc;
   border-radius: 5px;
-  font-family: 'Poiret One';
+  font-family: 'Dosis';
   font-size: 20px;
   font-weight: 500;
   color: #fdfffc;
@@ -604,7 +614,7 @@ input:checked + .slider:before {
   color: #fdfffc;
   background: #0a141f;
   text-align: center;
-  font-family: 'Poiret One';
+  font-family: 'Dosis';
   font-size: 16px;
   line-height: 25px;
 }
