@@ -116,7 +116,6 @@ h2 {
 }
 
 .sticky {
-  background-color: #080f17;
   position: sticky;
   top: 0;
   width: 100%;
@@ -193,10 +192,11 @@ h2 {
   display: flex;
 }
 
-.frameLine {
+#frameLine {
   width: 100%;
   height: 1px;
   background-color: #080f17;
+  display: none;
 }
 
 .lineWhite {

@@ -45,3 +45,16 @@ window.onclick = function(event) {
     }
   }
 };
+
+window.onscroll = function() {
+  var scrollPos = window.pageYOffset;
+  var navbar = document.getElementById('navbar');
+  var line = document.getElementById('frameLine');
+  if (scrollPos >= 200) {
+    line.style.display = "block";
+    navbar.style.backgroundColor = "#080f17"
+  } else {
+    line.style.display = "none";
+    navbar.style.backgroundColor = ""
+  }
+}
