@@ -340,6 +340,11 @@ input:checked + .slider:before {
     padding: 20px 0;
   }
 
+  .headerTextSlim {
+    font-size: 30px;
+    letter-spacing: 15px;
+  }
+
   .scrollToAboutMe {
     width: 100%;
     margin: 0px;
