@@ -432,6 +432,7 @@ input:checked + .slider:before {
 #skidCatPicture {
   background-image: url(../graphics/skidCatPicture.jpg);
   min-height: 500px;
+  max-height: 700px;
   width: 30%;
 }
 
