@@ -436,6 +436,17 @@ input:checked + .slider:before {
   width: 30%;
 }
 
+#skidCatPicture,
+#bearPicture {
+  filter: grayscale(1);
+  transition: all .6s ease;
+}
+
+#skidCatPicture:hover,
+#bearPicture:hover {
+  filter: none;
+}
+
 #bearPicture {
   background-image: url(../graphics/bearPicture.jpg);
   min-height: 300px;
