@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  background-color: #080f17;
+  background-color: #0a141f;
   background-image: url(../graphics/background.jpg);
   background-attachment: fixed;
   background-position: right;
@@ -151,6 +151,7 @@ h2 {
 
 .start:hover {
   background-color: #ffeedb;
+  color: black;
 }
 
 .responsiveMenu {
@@ -520,12 +521,13 @@ input:checked + .slider:before {
   color: white;
   border-style: solid;
   border-width: 1.5px;
-  border-color: #c03221;
+  border-color: #ffeedb;
   border-radius: 45px;
 }
 
 .submit:hover {
-  background: #c03221;
+  background: #ffeedb;
+  color: black;
 }
 
 @media all and (max-width: 1500px) {
@@ -633,7 +635,7 @@ input:checked + .slider:before {
   width: 250px;
   padding: 20px;
   color: #fdfffc;
-  background: #0a141f;
+  background: #080f17;
   text-align: center;
   font-family: 'Dosis';
   font-size: 16px;

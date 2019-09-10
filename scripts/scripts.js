@@ -52,7 +52,7 @@ window.onscroll = function() {
   var line = document.getElementById('frameLine');
   if (scrollPos >= 200) {
     line.style.display = "block";
-    navbar.style.backgroundColor = "#080f17"
+    navbar.style.backgroundColor = "#0a141f"
   } else {
     line.style.display = "none";
     navbar.style.backgroundColor = ""
