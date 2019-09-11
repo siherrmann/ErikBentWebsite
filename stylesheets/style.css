@@ -6,7 +6,6 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
 }
 
 body.en :lang(de) {
