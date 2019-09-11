@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background-color: #0a141f;
   background: url(../graphics/background.jpg) no-repeat center center fixed;
   height: 100%;
   background-size: cover;
@@ -165,6 +166,7 @@ h2 {
   background-color: #ffd8ad;
   text-decoration: none;
   border-radius: 40px;
+  color: white;
 }
 
 .dropMenu:hover {
