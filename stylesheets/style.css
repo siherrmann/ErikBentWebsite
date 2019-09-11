@@ -1,5 +1,12 @@
 html {
   scroll-behavior: smooth;
+  background: url(../graphics/background.jpg) no-repeat center center fixed;
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
 }
 
 body.en :lang(de) {
@@ -14,13 +21,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  background-color: #0a141f;
-  background-image: url(../graphics/background.jpg);
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
   font-family: 'Dosis';
   font-size: 18px;
   letter-spacing: 1px;
