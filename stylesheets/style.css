@@ -140,7 +140,7 @@ h2 {
 
 .start {
   color: white;
-  border-color: #ffeedb;
+  border-color: #ffd8ad;
   border-style: solid;
   border-width: 1.5px;
 }
@@ -150,7 +150,7 @@ h2 {
 }
 
 .start:hover {
-  background-color: #ffeedb;
+  background-color: #ffd8ad;
   color: black;
 }
 
@@ -161,7 +161,7 @@ h2 {
 .dropMenu {
   margin: 1%;
   padding: 10px 10px 12px 10px;
-  background-color: #c03221;
+  background-color: #ffd8ad;
   text-decoration: none;
   border-radius: 40px;
 }
@@ -264,7 +264,7 @@ h2 {
   transition: .4s;
   border-radius: 23px;
   border-style: solid;
-  border-color: #ffeedb;
+  border-color: #ffd8ad;
   border-width: 1.5px;
 }
 
@@ -327,7 +327,7 @@ input:checked + .slider:before {
   font-size: 20px;
   padding: 10px 80px;
   color: #080f17;
-  background-color: #ffeedb;
+  background-color: #ffd8ad;
   border-radius: 50px;
 }
 
@@ -521,12 +521,12 @@ input:checked + .slider:before {
   color: white;
   border-style: solid;
   border-width: 1.5px;
-  border-color: #ffeedb;
+  border-color: #ffd8ad;
   border-radius: 45px;
 }
 
 .submit:hover {
-  background: #ffeedb;
+  background: #ffd8ad;
   color: black;
 }
 
