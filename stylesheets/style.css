@@ -16,6 +16,8 @@ body {
   margin: 0 auto;
   background-color: #0a141f;
   background-image: url(../graphics/background.jpg);
+  width: 100%;
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
