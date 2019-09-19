@@ -13,7 +13,7 @@ function cookieOk() {
 
 function languageSet() {
   if (document.getElementById("switchLanguage").checked){
-    document.body.className = "de"
+    document.documentElement.lang = "de"
     var now = new Date(); // Variable für aktuelles Datum
     var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
     var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
@@ -24,7 +24,7 @@ function languageSet() {
     document.cookie =
       "languageSet = set; path=/; secure; expires=" + enddate;
   } else {
-    document.body.className = "en"
+    document.documentElement.lang = "en"
   }
 }
 
