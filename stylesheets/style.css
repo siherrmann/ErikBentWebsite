@@ -9,11 +9,11 @@ html {
   -o-background-size: cover;
 }
 
-.de:lang(de) {
+.de:lang(en) {
   display: none;
 }
 
-.en:lang(en) {
+.en:lang(de) {
   display: none;
 }
 
