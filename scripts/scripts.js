@@ -50,7 +50,7 @@ window.onscroll = function() {
   var scrollPos = window.pageYOffset;
   var navbar = document.getElementById('navbar');
   var line = document.getElementById('frameLine');
-  if (scrollPos >= 200) {
+  if (scrollPos >= 20) {
     line.style.display = "block";
     navbar.style.backgroundColor = "#0a141f"
   } else {
