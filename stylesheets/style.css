@@ -407,7 +407,7 @@ input:checked + .slider:before {
 }
 
 .withBackgroundColor {
-  background: #0a141f;
+  background: rgba(8,15,23,0.8);
 }
 
 .contentPicture {
@@ -652,7 +652,7 @@ input:checked + .slider:before {
 }
 
 .cookieButton {
-  width: 200px;
+  width: 230px;
   height: 50px;
   padding: 5px 20px;
   border-radius: 50px;
