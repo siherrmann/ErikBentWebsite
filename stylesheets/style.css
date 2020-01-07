@@ -631,7 +631,7 @@ input:checked + .slider:before {
 .footerCopyright {
   width: 100%;
   color: white;
-  background-color: #0a141f;
+  background-color: rgba(8,15,23,0.8);
   text-align: center;
   font-size: 14px;
 }
