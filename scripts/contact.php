@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail_to = "contact@erikbent.de";
 
     $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email");
-    if ($success) {.
+    if ($success) {
         http_response_code(200); #200=okay
         echo "Thank you for contacting us, $name. We will try to reply within 24 hours.";
     } else {
