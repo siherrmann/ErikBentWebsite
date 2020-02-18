@@ -165,6 +165,7 @@
 
     <div class="content wrap en">
       <form class="contact" method="post" action="scripts/contact.php">
+         <!-- onsubmit="return validateContactForm()" -->
         <div class="frameRowMulti">
           <div class="nameFrame frameColumnMulti">
             <label for="name">NAME</label>
@@ -235,6 +236,9 @@
           >
             SEND
           </button>
+        </div>
+        <div class="returnMsg" style="display: none" role="alert">
+          Your message was sent successfully.
         </div>
       </form>
     </div>
@@ -312,6 +316,9 @@
             ABSENDEN
           </button>
         </div>
+        <div class="returnMsg" style="display: none" role="alert">
+          Your message was sent successfully.
+        </div>
       </form>
     </div>
 
@@ -380,7 +387,8 @@
       };
     ?>
 
-    <script type="text/javascript" src="scripts/scripts.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" async></script>
+    <script type="text/javascript" src="scripts/main.js" async></script>
     <script src="https://www.google.com/recaptcha/api.js" defer></script>
   </body>
 </html>

@@ -1,3 +1,41 @@
+(function ($) {
+    'use strict';
+
+    var form = $('.contact'),
+        message = $('.returnMsg'),
+        form_data;
+
+    function successFunc(response) {
+        message.fadeIn().addClass('returnMsg');
+        message.text(response);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 4000);
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    function failFunc(data) {
+        message.fadeIn().addClass('returnMsg');
+        message.text(data.responseText);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 4000);
+    }
+
+    form.submit(function (e) {
+        e.preventDefault();
+        form_data = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: form_data
+        })
+        .done(successFunc)
+        .fail(failFunc);
+    });
+
+})(jQuery);
+
 function cookieOk() {
   var now = new Date(); // Variable für aktuelles Datum
   var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
@@ -57,4 +95,4 @@ window.onscroll = function() {
     line.style.display = "none";
     navbar.style.backgroundColor = ""
   }
-}
+};

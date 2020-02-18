@@ -539,6 +539,10 @@ input:checked + .slider:before {
   color: black;
 }
 
+.returnMsg {
+  color: #fdfffc;
+}
+
 @media all and (max-width: 1500px) {
   .content {
     padding: 50px 5%;
