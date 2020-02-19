@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $antwortDaten = json_decode($antwortJSON);
 
   if (!$antwortDaten->success) {
-    http_response_code(403); #403=okay
+    http_response_code(403); #403=forbidden
     echo "There was a problem with your submission, please try again.";
     exit;
   } else {
@@ -22,11 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         http_response_code(200); #200=okay
         echo "Thank you for contacting us, $name. We will try to reply within 24 hours.";
     } else {
-        http_response_code(500); #500=okay
+        http_response_code(500); #500=internal server error
         echo "We are sorry but the email did not go through.";
+        exit;
     }
 
-    $subjectResponse = 'Vielen Dank für Ihre Nachricht';
+    $subjectResponse = 'Ihre Nachricht an Erik Bent';
     $messageResponse = 'Vielen Dank für Ihre Nachricht, wir werden uns schnellstmöglich bei Ihnen melden.';
     // für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
     $headerResponse[] = 'MIME-Version: 1.0';
@@ -34,17 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headerResponse[] = 'To: $email';
     $headerResponse[] = 'From: Simon <contact@erikbent.de>';
 
-    $success = mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
-    if ($success) {
-        http_response_code(200); #200=okay
-        echo "Thank You! Your message has been sent.";
-    } else {
-        http_response_code(500); #500=okay
-        echo "Oops! Something went wrong, we couldn't send your message.";
-    }
+    mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
   }
 } else {
-  http_response_code(403); #403=okay
+  http_response_code(403); #403=forbidden
   echo "There was a problem with your submission, please try again.";
 }
 ?>
