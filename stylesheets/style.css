@@ -501,7 +501,7 @@ input:checked + .slider:before {
 .g-recaptcha,
 .submit {
   background-color: rgba(0,0,0,0)/*#0a141f*/;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid #fdfffc;
   border-radius: 5px;
   font-family: 'Dosis';
