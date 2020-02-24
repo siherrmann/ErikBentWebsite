@@ -520,6 +520,7 @@ input:checked + .slider:before {
 #message {
   max-width: 100%;
   height: 400px;
+  padding-top: 10px;#
 }
 
 .g-recaptcha {
