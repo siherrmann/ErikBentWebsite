@@ -1,6 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+  $lastname = $_POST['lastname'];
+
   if (strlen($lastname)>0) {
     http_response_code(403); #403=forbidden
     echo "There was a problem with your submission, please try again.";
