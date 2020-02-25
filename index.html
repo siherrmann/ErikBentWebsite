@@ -3,8 +3,7 @@
   <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-70a9a1-40798c -->
   <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-84dccf-d62828 -->
   <!-- https://coolors.co/0a141f-fdfffc-7f7783-ffd8ad-a63d40 -->
-  <!-- new color scheme, second color can be changed to cantrast color:
-  https://coolors.co/080f17-0a141f-fdfffc-ffd8ad-124559 -->
+  <!-- new color scheme https://coolors.co/080f17-ad343e-fdfffc-ffd8ad-124559 -->
 
   <head>
     <title>Erik Bent</title>
@@ -223,12 +222,20 @@
             onchange="this.setCustomValidity('')"
           ></textarea>
         </div>
-        <div class="frame">
-          <div
-            class="g-recaptcha"
-            data-theme="dark"
-            data-sitekey="6LcKjHoUAAAAAEJ4Rpq3dAIeghxt14kewGdvac3C"
-          ></div>
+        <div class="frame pot">
+          <label for="lastname">Don't fill this field!</label>
+          <textarea
+            rows="1"
+            cols="30"
+            id="lastname"
+            name="lastname"
+            maxlength="12"
+            minlength="5"
+            placeholder="lastname"
+            required=""
+            oninvalid="this.setCustomValidity('Gib deine Nachricht ein')"
+            onchange="this.setCustomValidity('')"
+          ></textarea>
         </div>
         <div class="frame">
           <button
@@ -301,12 +308,20 @@
             onchange="this.setCustomValidity('')"
           ></textarea>
         </div>
-        <div class="frame">
-          <div
-            class="g-recaptcha"
-            data-theme="dark"
-            data-sitekey="6Lc31q4UAAAAAJlIzeOe0fWm1A9O-lD6YqyZEUsF"
-          ></div>
+        <div class="frame pot">
+          <label for="lastname">Bitte nicht ausfüllen!</label>
+          <textarea
+            rows="1"
+            cols="30"
+            id="lastname"
+            name="lastname"
+            maxlength="12"
+            minlength="5"
+            placeholder="nachname"
+            required=""
+            oninvalid="this.setCustomValidity('Gib deine Nachricht ein')"
+            onchange="this.setCustomValidity('')"
+          ></textarea>
         </div>
         <div class="frame">
           <button
@@ -328,7 +343,7 @@
 
     <div class="footer">
       <div class="footerPartFrame">
-        <img src="graphics/location.svg" alt="Adresse" class="footerPicture" />
+        <img src="graphics/locationSimple.svg" alt="Adresse" class="footerPicture" />
         <div class="footerText">
           <p>
             Simon Herrmann<br />
@@ -339,11 +354,11 @@
         </div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/email.svg" alt="Email" class="footerPicture" />
+        <img src="graphics/emailSimple.svg" alt="Email" class="footerPicture" />
         <div class="footerText"><p>Mail: contact@erikbent.de</p></div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/phone.svg" alt="Telefon" class="footerPicture" />
+        <img src="graphics/phoneSimple.svg" alt="Telefon" class="footerPicture" />
         <div class="footerText">
           <p>
             Fon
@@ -395,6 +410,5 @@
       crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="scripts/main.js" async></script>
-    <script src="https://www.google.com/recaptcha/api.js" defer></script>
   </body>
 </html>

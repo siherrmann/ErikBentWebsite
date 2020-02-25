@@ -1,11 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $secretkey = '6Lc31q4UAAAAAI4UiRxWGqFHDgA_5uCwLKG0joNs';
 
-  $antwortJSON = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretkey.'&response='.$_POST['g-recaptcha-response']);
-  $antwortDaten = json_decode($antwortJSON);
-
-  if (!$antwortDaten->success) {
+  if (strlen($lastname)>0) {
     http_response_code(403); #403=forbidden
     echo "There was a problem with your submission, please try again.";
     exit;
