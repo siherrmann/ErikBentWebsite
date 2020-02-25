@@ -37,7 +37,7 @@
 })(jQuery);
 
 function cookieOk() {
-  var now = new Date(); // Variable für aktuelles Datum
+  var now = new Date();
   var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
   var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
 
@@ -52,7 +52,7 @@ function cookieOk() {
 function languageSet() {
   if (document.getElementById("switchLanguage").checked){
     document.documentElement.lang = "de"
-    var now = new Date(); // Variable für aktuelles Datum
+    var now = new Date();
     var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
     var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
 
