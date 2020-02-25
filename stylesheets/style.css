@@ -17,6 +17,14 @@ html {
   display: none;
 }
 
+@font-face {
+    font-family: 'Dosis';
+    src: url('../fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   display: flex;
   flex-flow: row wrap;
