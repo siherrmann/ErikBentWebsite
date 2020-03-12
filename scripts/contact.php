@@ -24,27 +24,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
 
-    $mail_to = "contact@erikbent.de";
+    $mail_to = "contact@erikbent.de, $email";
+	  $messageResponse = '
+  		<html>
+  		<head>
+  			<title>Your message to Simon Herrmann/Erik Bent</title>
+  		</head>
+  		<body>
+  		  <p>Thank you for your message, I will get back to you as soon as possible.</p>
+  		  <p>Your message to Simon Herrmann/Erik Bent: '.$message.'</p>
+  		  <p>With friendly regards,<br/>Simon Herrmann</p>
+  		</body>
+  		</html>';
 
-    $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email");
+    $headerResponse[] = 'MIME-Version: 1.0';
+    $headerResponse[] = 'Content-type: text/html; charset=utf-8';
+	  $headerResponse[] = 'From: Simon Herrmann <contact@erikbent.de>';
+
+    $success = mail($mail_to, "$subject - Message by $name", "$messageResponse", implode("\r\n", $headerResponse));
     if ($success) {
         http_response_code(200); #200=okay
-        echo "Thank you for contacting us, $name. We will try to reply within 24 hours.";
+        echo "Thank you for your message, $name. I will contact you as soon as possible.";
     } else {
         http_response_code(500); #500=internal server error
-        echo "We are sorry but the email did not go through.";
+        echo "I'm sorry but the email did not go through.";
         exit;
     }
-
-    $subjectResponse = 'Your message to Erik Bent';
-    $messageResponse = 'Thank you for your message, we will get back to you as soon as possible.';
-    // für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
-    $headerResponse[] = 'MIME-Version: 1.0';
-    $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
-    $headerResponse[] = 'To: $email';
-    $headerResponse[] = 'From: Simon <contact@erikbent.de>';
-
-    mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
   }
 } else {
   http_response_code(403); #403=forbidden
